@@ -1,0 +1,40 @@
+p 585.0 190.0 {Data packet} 0 n
+t 465.0 190.0 {Data gathering} n 30 60 s {} ne
+p 590.0 460.0 {Data packet 2} 0 n
+t 470.0 460.0 {Data gathering 2} n 30 60 s {} ne
+p 595.0 730.0 {Data packet 3} 0 s
+t 475.0 730.0 {Data gathering 3} n 30 60 s {} ne
+a 225.0 745.0 n3 1 {Region 3}
+a 230.0 485.0 n2 1 {Region 2}
+a 225.0 205.0 n1 1 {Region 1}
+t 800.0 460.0 {Data processing} n 0 w n {} ne
+p 315.0 465.0 {Station 5} 1 n
+p 310.0 195.0 {Station 2} 1 n
+p 310.0 265.0 {Station 3} 1 n
+p 310.0 130.0 {Station 1} 1 n
+p 315.0 535.0 {Station 6} 1 n
+p 315.0 395.0 {Station 4} 1 n
+p 320.0 735.0 {Station 8} 1 n
+p 320.0 665.0 {Station 7} 1 n
+p 320.0 805.0 {Station 9} 1 n
+p 905.0 460.0 Information 0 n
+a 810.0 285.0 n0 1 {Note:The time interval is in seconds}
+e {Data packet 3} {Data processing} 1 n
+e {Data packet 2} {Data processing} 1 n
+e {Data packet} {Data processing} 1 n
+e {Data gathering 3} {Data packet 3} 1 n
+e {Station 7} {Data gathering 3} 1 n
+e {Station 8} {Data gathering 3} 1 n
+e {Station 9} {Data gathering 3} 1 n
+e {Data gathering 2} {Data packet 2} 1 n
+e {Station 4} {Data gathering 2} 1 n
+e {Station 5} {Data gathering 2} 1 n
+e {Station 6} {Data gathering 2} 1 n
+e {Station 3} {Data gathering} 1 n
+e {Station 2} {Data gathering} 1 n
+e {Station 1} {Data gathering} 1 n
+e {Data gathering} {Data packet} 1 n
+e {Data processing} Information 1 n
+h aeroguard_regiune
+
+
