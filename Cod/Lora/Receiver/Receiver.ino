@@ -1,13 +1,35 @@
 #include <SX127x.h>
+#include <string.h>
 
 SX127x LoRa;
 
+const uint8_t bufferSize = 32; // Adjust this based on your expected message length
+char message[bufferSize];
+uint16_t counter = 0;
+int val=0;
+
+int size_(char input[4]){
+    int i=0;
+    while(input[i] != '\0'){
+      i++;
+    }
+    return i;
+}
+
+void to_int(int& out,char input[4]){
+    out = 0;
+    int s = size_(input);
+    for(int i=0;i<s;i++){
+        out =out*10;
+        out = out +(input[i]-'0');
+    }
+}
 void setup() {
 
   // Begin serial communication
   Serial.begin(38400);
-
-  // Uncomment below to use non default SPI port
+  pinMode(3, OUTPUT);
+  //Uncomment below to use non default SPI port
   //SPIClass SPI_2(PB15, PB14, PB13);
   //LoRa.setSPI(SPI_2, 16000000);
 
@@ -20,10 +42,9 @@ void setup() {
     while(1);
   }
 
-  // Set frequency to 915 Mhz
+  // Set frequency to 433 Mhz
   Serial.println("Set frequency to 433 Mhz");
   LoRa.setFrequency(433E6);
-
   // Set RX gain. RX gain option are power saving gain or boosted gain
   Serial.println("Set RX gain to power saving gain");
   LoRa.setRxGain(SX127X_RX_GAIN_POWER_SAVING, SX127X_RX_GAIN_AUTO); // AGC on, Power saving gain
@@ -47,25 +68,25 @@ void setup() {
   // Set syncronize word
   Serial.println("Set syncronize word to 0x34");
   LoRa.setSyncWord(0x34);
-
   Serial.println("\n-- LORA RECEIVER --\n");
-
-}
+  LoRa.set_rx_mode_single();
+} 
 
 void loop() {
-
-  // Request for receiving new LoRa packet
   LoRa.request();
   // Wait for incoming LoRa packet
   LoRa.wait();
 
   // Put received packet to message and counter variable
   // read() and available() method must be called after request() method
+
   const uint8_t msgLen = LoRa.available() - 1;
   char message[msgLen];
   LoRa.read(message, msgLen);
   uint8_t counter = LoRa.read();
+  to_int(val, message);
 
+  analogWrite(3,val);
   // Print received message and counter in serial
   Serial.write(message, msgLen);
   Serial.print("  ");
@@ -83,5 +104,4 @@ void loop() {
   if (status == SX127X_STATUS_CRC_ERR) Serial.println("CRC error");
   else if (status == SX127X_STATUS_HEADER_ERR) Serial.println("Packet header error");
   Serial.println();
-
 }

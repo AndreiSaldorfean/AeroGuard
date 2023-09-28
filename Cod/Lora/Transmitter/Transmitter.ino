@@ -1,16 +1,30 @@
 #include <SX127x.h>
+#include <string.h>
 
 SX127x LoRa;
 
 // Message to transmit
-char message[] = "HeLoRa World!";
+char message[] = " bossi!";
 uint8_t nBytes = sizeof(message);
 uint8_t counter = 0;
+uint8_t pot=0;
+char mes[4];
+
+void to_char(uint8_t val,char out[4]){
+    String temp;
+    temp = String(val);
+    for(int i=0;i<sizeof(temp);i++){
+      out[i] = temp[i];
+    }
+    out[sizeof(temp)] ='\0';
+}
 
 void setup() {
 
   // Begin serial communication
   Serial.begin(38400);
+
+  pinMode(A0, INPUT);
 
   // Uncomment below to use non default SPI port
   //SPIClass SPI_2(PB15, PB14, PB13);
@@ -30,8 +44,8 @@ void setup() {
   LoRa.setFrequency(433E6);
 
   // Set TX power, this function will set PA config with optimal setting for requested TX power
-  Serial.println("Set TX power to +7 dBm");
-  LoRa.setTxPower(7, SX127X_TX_POWER_PA_BOOST);                    // TX power +17 dBm using PA boost pin
+  Serial.println("Set TX power to +6 dBm");
+  LoRa.setTxPower(6 , SX127X_TX_POWER_PA_BOOST);
 
   // Configure modulation parameter including spreading factor (SF), bandwidth (BW), and coding rate (CR)
   // Transmitter must have same SF and BW setting so receiver can receive LoRa packet
@@ -52,7 +66,7 @@ void setup() {
   // Set syncronize word
   Serial.println("Set syncronize word to 0x34");
   LoRa.setSyncWord(0x34);
-
+  
   Serial.println("\n-- LORA TRANSMITTER --\n");
 
 }
@@ -61,13 +75,17 @@ void loop() {
 
   // Transmit message and counter
   // write() method must be placed between beginPacket() and endPacket()
+  pot = analogRead(A0);
+  to_char(pot,mes);
+
+  // Serial.println(mes);
   LoRa.beginPacket();
-  LoRa.write(message, nBytes);
+  LoRa.write(mes,sizeof(mes));
   LoRa.write(counter);
   LoRa.endPacket();
 
   // Print message and counter in serial
-  Serial.write(message, nBytes);
+  Serial.write(mes,sizeof(mes));
   Serial.print("  ");
   Serial.println(counter++);
 
@@ -81,6 +99,5 @@ void loop() {
   Serial.println();
 
   // Don't load RF module with continous transmit
-  delay(5000);
-
+  delay(1000);
 }
