@@ -164,8 +164,9 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(1);
-  Handshake hand();
+  // Serial.println(1);
+  // Handshake hand();
   
   halt();
+      
 }
