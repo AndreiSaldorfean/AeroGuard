@@ -7,7 +7,9 @@
 SX127x LoRa;
 
 void halt(){
-  while(1);
+  while(1){
+    delay(50);
+  }
 }
 int size_(char input[4]){
     int i=0;

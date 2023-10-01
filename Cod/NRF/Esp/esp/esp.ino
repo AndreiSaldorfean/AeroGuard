@@ -2,10 +2,10 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 
-RF24 radio(7,8); // CE, CSN
+RF24 radio(4,SS); // CE, CSN
 int address[2] = {0,1};
 int n=2;
-char message='2';
+char message='1';
 
 
 void halt(){
@@ -80,9 +80,10 @@ void setup() {
 
 void loop(){
   
-
+  receive();
+  delay(1000);
   send(message);
   delay(1000);
-receive();
+
   halt();
 }
