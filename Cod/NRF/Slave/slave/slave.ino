@@ -1,88 +1,68 @@
+// SimpleTx - the master or the transmitter
+
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 
-RF24 radio(7,8); // CE, CSN
-int address[2] = {0,1};
-int n=2;
-char message='2';
+
+#define CE_PIN   7
+#define CSN_PIN  8
+
+const byte address[5] = {0,1,2,3,4};
 
 
-void halt(){
-  while(1){
-    delay(50);
-  }
-}
-int size_(char input[4]){
-    int i=0;
-    while(input[i] != '\0'){
-      i++;
-    }
-    return i;
-}
-void to_char(uint8_t val,char out[4]){
-    String temp;
-    temp = String(val);
-    for(int i=0;i<sizeof(temp);i++){
-      out[i] = temp[i];
-    }
-    out[sizeof(temp)] ='\0';
-}
+RF24 radio(CE_PIN, CSN_PIN); // Create a Radio
 
-void receive(){
-  char text[32];
-  radio.openReadingPipe(0,address[0]);
-  radio.startListening();
+char dataToSend[32] = "69 - Bulevardul_Victoriei_69";
 
-  while(!radio.available()){  
-    delay(20);
-    // Serial.print("Wait ");
-    // Serial.print(radio.available());
-    // Serial.println();
-  }
 
-  radio.read(&text, sizeof(text));
-  Serial.println(text);
-  radio.stopListening();
-  radio.closeReadingPipe(address[0]);
-}
+unsigned long currentMillis;
+unsigned long prevMillis;
+unsigned long txIntervalMillis = 1000; // send once per second
 
-void send(char msg){
-  radio.openWritingPipe(address[0]);
-  radio.write(&msg,sizeof(msg));
-  Serial.println(msg);
-  delay(1000);
-}
-
-struct Handshake{
-  private:
-
-  public:
-    void init(){
-
-    }
-  Handshake(){
-
-  }
-  
-};
 
 void setup() {
-  Serial.begin(9600);
-  if(!radio.begin()){
-    Serial.println("Nu mere");
-    while(1);  
-  }
-  
-  radio.setPALevel(RF24_PA_MIN);
+
+    Serial.begin(9600);
+
+    if(!radio.begin()){
+      Serial.println("Radio Failed");
+      while(1){
+        delay(200);
+      }
+    }
+    radio.setDataRate( RF24_250KBPS );
+    radio.setRetries(3,5); // delay, count
+    radio.openWritingPipe(address);
 }
 
+//====================
 
-void loop(){
-  
-
-  send(message);
-  delay(1000);
-receive();
-  halt();
+void loop() {
+    currentMillis = millis();
+    if (currentMillis - prevMillis >= txIntervalMillis) {
+        send();
+        prevMillis = millis();
+    }
 }
+
+//====================
+
+void send() {
+
+    bool rslt;
+    rslt = radio.write( &dataToSend, sizeof(dataToSend) );
+        // Always use sizeof() as it gives the size as the number of bytes.
+        // For example if dataToSend was an int sizeof() would correctly return 2
+
+    Serial.print("Data Sent ");
+    Serial.print(dataToSend);
+    if (rslt) {
+        Serial.println("  Acknowledge received");
+    }
+    else {
+        Serial.println("  Tx failed");
+    }
+}
+
+//================
