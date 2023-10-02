@@ -7,11 +7,10 @@
 #define CE_PIN   4
 #define CSN_PIN SS
 
-const byte address[5] = {1,2,3};
+const byte address[5] = {0,1,2,3,4};
 
 RF24 radio(CE_PIN, CSN_PIN);
 
-StaticJsonBuffer<200> jsonBuffer;
 char dataReceived[32]; // this must match dataToSend in the TX
 bool newData = false;
 
@@ -26,11 +25,8 @@ void setup() {
         delay(200);
       }
     }
-    radio.setPALevel(RF24_PA_LOW);
     radio.setDataRate( RF24_250KBPS );
-    radio.openReadingPipe(1, address[0]);
-    radio.openReadingPipe(2, address[1]);
-    radio.openReadingPipe(3, address[2]);
+    radio.openReadingPipe(1, address);
     radio.startListening();
 }
 
