@@ -1,0 +1,220 @@
+[33mcommit a66095b5c2d2dca9dea9743851bed6daf17bbccb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 01:55:42 2023 +0300
+
+[33mcommit 89dfea527712b88fa96638428e7127b426b91307[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 01:28:02 2023 +0300
+
+[33mcommit 49de8bf50c91b6c3d5519bc4c992f1f0c63834af[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 01:20:28 2023 +0300
+
+[33mcommit 1468fd35d1c7a836fa61eb10cec1972850f76430[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Mon Oct 2 01:08:05 2023 +0300
+
+    Update README.txt
+
+[33mcommit 0ead64d9e4e2d7c70e689d2b0170575842b974c8[m
+Author: Andrei Saldorfean <79752722+RodreanU@users.noreply.github.com>
+Date:   Mon Oct 2 01:04:10 2023 +0300
+
+    Update README.txt
+
+[33mcommit 255ddc6e0ff1200feede9347e1b9165dce846bed[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 01:02:34 2023 +0300
+
+[33mcommit 78e3bbc9ef1bc8cf3f63e9aad664342f2cdcf281[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 00:42:21 2023 +0300
+
+[33mcommit e898c26f02cc94b0979352c3d92bf79a0d8877b8[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 00:40:24 2023 +0300
+
+[33mcommit f9c4b85526234cb098f480356db2b131611828e4[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Mon Oct 2 00:33:31 2023 +0300
+
+[33mcommit dd5c984c1e1885b1c0329aa6db5a3ae3b6768d16[m
+Merge: ccdb081 18c4cd5
+Author: RodreanaU <andreisaldorfean@gmail.com>
+Date:   Sun Oct 1 15:21:20 2023 +0300
+
+    Merge branch 'main' of https://github.com/RodreanU/Metrica
+
+[33mcommit 18c4cd53d5ff6e2167e149ded0a0f0e37352fe91[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Sun Oct 1 15:21:03 2023 +0300
+
+    de cercetat
+
+[33mcommit ccdb081db2ce23816c81a1dbf164da83915c48f4[m
+Author: RodreanaU <andreisaldorfean@gmail.com>
+Date:   Sun Oct 1 15:20:53 2023 +0300
+
+    nimic
+
+[33mcommit 587d1f67c0f346ef0158616847c31dae2d9591d3[m
+Author: RodreanaU <andreisaldorfean@gmail.com>
+Date:   Sat Sep 30 22:11:25 2023 +0300
+
+    cod pentru nrf
+
+[33mcommit cbd699ca2ea6d580493d73066dad3925fbfcab4c[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Sat Sep 30 17:05:02 2023 +0300
+
+    Adaugare logo
+
+[33mcommit 1b8f78cb221f7f2483072fbf8d126dbe181fd5d7[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Sat Sep 30 15:02:41 2023 +0300
+
+    ceva
+
+[33mcommit bcab3bcfa065b39d3b70d6f98f7ca1fd7e657ea4[m
+Merge: c68a0f3 ac16faa
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Sep 28 16:00:09 2023 +0300
+
+    Merge branch 'main' of https://github.com/RodreanU/Metrica
+
+[33mcommit c68a0f3671848c4a56bfd14e47dd3814a2284b6c[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Sep 28 15:59:47 2023 +0300
+
+    Huge update
+
+[33mcommit ac16faa0b1abb7cfa5e847351c80fabcd42d70d1[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Tue Sep 26 13:27:33 2023 +0300
+
+    Adaugare retea Petri
+
+[33mcommit bbe2b2a45d5d8af7bb8affdf90ea2637a7587081[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Tue Sep 26 13:21:14 2023 +0300
+
+    Adaugare montaj nou
+
+[33mcommit 98d3937e7f5abf3197e28acdb44d40749889db40[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Fri Sep 15 16:02:03 2023 +0300
+
+    Am adaugat codu pentru lora (Nu e nici pe aproape gata, l-am salvat numa asa ca sa pot lucra la el cand am chef)
+
+[33mcommit ccf42703d3bb754251a28599ae95a474dc43381b[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Tue Sep 12 21:31:52 2023 +0300
+
+    modul regulator tensiune 5V-3.3V
+
+[33mcommit 477053d4fdd5634fa10aba39e2f6bf2117e48258[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Fri Sep 1 23:34:39 2023 +0300
+
+    Add files via upload
+    
+    Completare schema electrica
+
+[33mcommit acb8242de39451f2f4cfa5ac2259ce9a536e0b68[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Sat Aug 26 19:40:06 2023 +0300
+
+    Add files via upload
+    
+    teorie
+
+[33mcommit 961ce4de7c5106985a0b6260aa0bc18144115a7e[m
+Merge: 2388da2 3ae5135
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Fri Aug 25 23:42:48 2023 +0300
+
+    Merge branch 'main' of https://github.com/RodreanU/Metrica
+
+[33mcommit 2388da226ad3259de28587101b07d6814267cb29[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Fri Aug 25 23:42:23 2023 +0300
+
+[33mcommit 3ae5135dc40f5d5523a16333c90258423b0cdc74[m
+Author: Andrei Saldorfean <79752722+RodreanU@users.noreply.github.com>
+Date:   Fri Aug 25 23:41:40 2023 +0300
+
+    Update README.txt
+    
+    Am facut si eu un update la readme ca sa avem si noi o prezentare la ce facem
+
+[33mcommit b1acbe6bc9721fb25627da408d00cb5037103e2c[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Fri Aug 25 13:12:54 2023 +0300
+
+    Am mai sortat un pic folderele
+
+[33mcommit 14caa194d40477c54dd0363664cd064355e8b929[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Fri Aug 25 00:13:38 2023 +0300
+
+    Add files via upload
+    
+    Biblioteca pentru MQ135
+
+[33mcommit 6be6d0312b4829c81257d937ca6a0523721e2e28[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Fri Aug 25 00:10:18 2023 +0300
+
+    Add files via upload
+
+[33mcommit a2ee5dcb79872486adc7e2711ea7192e3ad267b8[m
+Author: MN3141 <117996028+MN3141@users.noreply.github.com>
+Date:   Fri Aug 25 00:05:57 2023 +0300
+
+    Add files via upload
+
+[33mcommit d3d2f79a46a0efc1e97dd2ea205ec026079d19ed[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 22:37:58 2023 +0300
+
+[33mcommit e2fd42012484d290f4a6f906fad9ebaf8487ee1a[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 19:59:00 2023 +0300
+
+[33mcommit 01acd090f485f3ca9c13128445b92c8f20fb4179[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 19:58:06 2023 +0300
+
+[33mcommit b6c7ddc4a510782814cadf39e33bfc908449c857[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 16:51:55 2023 +0300
+
+    Harta networkului de senzori montati in sibiu
+
+[33mcommit dcd37fc53cbe941fb8cde599f8ac4d10a901f89e[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 15:48:59 2023 +0300
+
+[33mcommit 3cf7bdcce9de10191d45b3b9cbc15d2783cdbd7c[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 15:47:13 2023 +0300
+
+[33mcommit 4f3012eced0c885b40e4df003aec9cb558d788b9[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 15:39:02 2023 +0300
+
+[33mcommit 82d2ce8a8d443669b076447a17aebeb50047846a[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Thu Aug 24 15:20:14 2023 +0300
+
+[33mcommit 6f0433121a886ee45beca0cc1767de55df22feb9[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Wed Aug 23 21:14:31 2023 +0300
+
+    –allow-empty-message
+
+[33mcommit 32983756e1e90037912064b3a8cf54b11a310d45[m
+Author: RodreanU <andreisaldorfean@gmail.com>
+Date:   Wed Aug 23 20:26:09 2023 +0300
+
+    First commit, 8/23/2023
