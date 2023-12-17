@@ -16,3 +16,5 @@ Punctul central, ( punctele mov ) reprezinta o statie ce va colecta datele de la
 
 
 Centrul de colectare a datelor, ( punctele verzi ) este un ESP8266 care primeste datele de pe fiecare cartier si le afiseaza pe un site.
+
+Created by: Andrei Saldorfean, Petru Iulian, Neag Mihai, Stancu Tudor
